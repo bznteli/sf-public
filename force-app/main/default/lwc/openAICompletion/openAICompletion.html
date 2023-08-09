@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Summarize Case Comments" icon-name="custom:custom19">
+        <div class="slds-p-around_small">
+            <lightning-input class="slds-p-around_medium" type="text" label="Prompt" name="prompt" value={prompt} onchange={handleChange}>
+            </lightning-input>
+            <lightning-button class="slds-p-around_medium" label="Summarize Case Comments"
+                onclick={summarizeCaseComments}></lightning-button>
+            <template if:true={summary}>
+                <div class="slds-p-around_medium">
+                    Result: <p class="slds-p-around_medium">{summary}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
